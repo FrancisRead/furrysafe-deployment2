@@ -25,7 +25,7 @@ let _user_id = localStorage.getItem('u_id')
 let posts = ref([])
 async function retrieveReports() {
     try {
-        const response = await axios.post("http://localhost:5000/getereports", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
             _user_id: _user_id
         });
 

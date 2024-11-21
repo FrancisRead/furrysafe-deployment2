@@ -155,7 +155,7 @@ export default {
         },
         async getUser() {
             try {
-                const response = await axios.post("http://localhost:5000/login", {
+                const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/login", {
                     email: this.userEmail,
                     password: this.userPassword
                 }, {

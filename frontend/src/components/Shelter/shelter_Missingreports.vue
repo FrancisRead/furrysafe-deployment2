@@ -34,7 +34,7 @@ let _user_id = localStorage.getItem('u_id')
 async function retrieveReports() { //display
     try {
         console.log("retrieveReports")
-        const response = await axios.post("http://localhost:5000/getereports", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getereports", {
             _post_id: selectedPost.value,
             _post_type: 2,
             _report_status: 'Pending' // Nov12 'In progress'  change to 'Pending'

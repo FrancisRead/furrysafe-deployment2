@@ -112,7 +112,7 @@ let _user_id = localStorage.getItem('u_id')
 async function retrieveReports() {
     try {
         console.log("retrieveReports =)")
-        const response = await axios.post("http://localhost:5000/getongoingoperations", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getongoingoperations", {
             _shelter_id: _user_id,
             _status: 'In progress' // Nov12 'Pending' change to 'In progress' 
         });
@@ -134,7 +134,7 @@ const cancelRescue = async () => { //rescued => yes
 
     console.debug('Cancelling rescue for postId:', props.postId); // Debug line
     try {
-        const response = await axios.post('http://localhost:5000/cancelOperation', {
+        const response = await axios.post('https://capstone-furry-safe-vl9o.onrender.com/cancelOperation', {
             _post_id: props.postId,
             _user_id: localStorage.getItem('u_id')
         });
@@ -160,7 +160,7 @@ const userFullName = ref(null)
 const currentUser_id = localStorage.getItem('u_id')
 const getUserFullName = async () => {
     try {
-        const response = await axios.post("http://localhost:5000/getfullname", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getfullname", {
             id: currentUser_id,
         });
 
@@ -211,7 +211,7 @@ const selectedChat_id = ref(null)
 const retrieveChatId = async () => {
     try {
         console.log("new chat", currentUser_id, receiverId.value)
-        const response = await axios.post("http://localhost:5000/newchat", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/newchat", {
             senderid: currentUser_id,
             receiverid: receiverId.value
         });
@@ -232,7 +232,7 @@ async function sendMessagetoUser(thisformData) {
 
     // return
     try {
-        const response = await axios.post("http://localhost:5000/sendmessage", thisformData, {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/sendmessage", thisformData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

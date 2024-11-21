@@ -37,7 +37,7 @@ async function retrieveReports() {
     console.log("retrieveReports")
 
     try {
-        const response = await axios.post("http://localhost:5000/getongoingoperations", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getongoingoperations", {
             _shelter_id: _user_id,
             _status: 'In progress' // Nov12 'Pending' change to 'In progress' 
         });

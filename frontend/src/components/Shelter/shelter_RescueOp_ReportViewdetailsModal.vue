@@ -60,7 +60,7 @@ let _user_id = ref(null)
 let userdetails = ref([])
 async function getUserDetailsOnHover() {
     try {
-        const response = await axios.post("http://localhost:5000/getusedetails", {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/getusedetails", {
             _id: _user_id.value
         });
 

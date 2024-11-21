@@ -144,7 +144,7 @@ const handleSignup = async () => {
 const setUser = async () => {
     console.log("Preparing to send request...");
     try {
-        const response = await axios.post("http://localhost:5000/shelter-registration", formData.value, {
+        const response = await axios.post("https://capstone-furry-safe-vl9o.onrender.com/shelter-registration", formData.value, {
             'Content-Type': 'multipart/form-data'
         });
 

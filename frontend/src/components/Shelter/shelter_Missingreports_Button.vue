@@ -71,7 +71,7 @@ onMounted(async () => {
 let status = 'Rescued'
 async function setFoundPet() {
     try {
-        const response = await axios.post('http://localhost:5000/accept-report', {
+        const response = await axios.post('https://capstone-furry-safe-vl9o.onrender.com/accept-report', {
             post_id: props.postId,
             user_id: localStorage.getItem('u_id'),
             status: status,
